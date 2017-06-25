@@ -18,3 +18,234 @@ body {
 }
 
 
+
+
+.head {
+	height: 1260px;
+	background-color: #fff;
+	background-image: url(/img/bg-top.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+
+	&:after {
+		content: "";	
+		height: 430px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-image: url(/img/bg-bottom.png);
+	}
+}
+
+.head-top {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding-top: 35px;
+	height: 135px;
+}
+
+.menu-open {
+	position: absolute;
+	left: 0;
+	top: 70px;
+	.sprite(@menu);
+}
+
+.heas__logo {
+	position: absolute;
+	left: 70px;
+	top: 35px;
+}
+
+.head-contact {
+	text-align: center;
+	color: #fff;
+}
+
+.head-contact__phone {
+	font-size: 28px;
+}
+
+.head-contact__text {
+	font-size: 18px;
+}
+
+.head-service {
+	position: absolute;
+	top: 45px;
+	right: 0;
+}
+
+.head-service__one {
+	display: inline-block;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	position: relative;
+	margin-bottom: 20px;
+	border-bottom: 1px dashed #fff;
+
+}
+
+.head-service--write {
+	position: absolute;
+	top: -3px;
+	left: -40px;
+	.sprite(@edit);
+	display: inline-block;
+}
+
+.head-service--map {
+	position: absolute;
+	top: -3px;
+	left: -40px;
+	.sprite(@map);
+	display: inline-block;
+}
+
+.head-baner {
+	max-width: 960px;
+	margin: 0 auto;
+	padding-top: 550px;
+	text-align: center;
+	word-spacing: -0.3em;
+}
+
+.head-baner__one {
+	display: inline-block;
+	text-decoration: none;
+	margin: 0 70px;
+	position: relative;
+
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+
+	&:nth-child(1) {
+		margin-left: 0;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+			bottom: -18px;
+    	left: -28px;
+		z-index: 1;	
+		.sprite(@baner-shadow);
+		opacity: 0.9;
+	}
+
+	img {
+		z-index: 2;
+		display: block;
+	}
+}
+
+.advant {
+	max-width: 960px;
+	margin: 0 auto;
+	word-spacing: -0.3em;
+	padding-top: 50px;
+	z-index: 10;
+}
+
+.advant-title {
+	margin-bottom: 30px;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #000;
+	text-align: center;
+}
+
+.advant-list {
+	word-spacing: -0.3em;
+}
+
+.advant-one {
+	width: 50%;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.advant-one__icon {
+	display: table-cell;
+	position: relative;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -20px;
+		left: -10px;
+		.sprite(@advant-shadow);
+	}
+}
+
+.advant-one__text {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 40px;
+	font-size: 24px;
+	color: #454545;
+	font-weight: 300;
+	font-family: @font-alt;
+}
+
+.advant-one__icon--1 {
+	.sprite(@advant-1)
+}
+
+.advant-one__icon--2 {
+	.sprite(@advant-2)
+}
+
+.advant-one__icon--3 {
+	.sprite(@advant-3)
+}
+
+.advant-one__icon--4 {
+	.sprite(@advant-4)
+}
+
+.advant-one__icon--5 {
+	.sprite(@advant-5)
+}
+
+.advant-one__icon--6 {
+	.sprite(@advant-6)
+}
+
+
+
+
+.service {
+	background-image: url(/img/blue-bg.jpg);
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.service-inn {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.service-one {
+	
+}
+
+.service-one__title {
+	
+}
+
+.service-one__text {
+	
+}
+
+.service-one__price {
+	
+}
+

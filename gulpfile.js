@@ -198,7 +198,7 @@ gulp.task('sprite', [
 
 
 
-var config = { // данные для доступа к ssh
+var configSSH = { // данные для доступа к ssh
   host: '192.162.1.1',
   port: 22,
   username: 'username',
@@ -207,7 +207,7 @@ var config = { // данные для доступа к ssh
 
 var gulpSSH = new GulpSSH({
   ignoreErrors: false,
-  sshConfig: config
+  sshConfig: configSSH
 })
 
 gulp.task('dest', function () {
