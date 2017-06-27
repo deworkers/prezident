@@ -196,27 +196,27 @@ body {
 }
 
 .advant-one__icon--1 {
-	.sprite(@advant-1)
+	.sprite(@advant-1);
 }
 
 .advant-one__icon--2 {
-	.sprite(@advant-2)
+	.sprite(@advant-2);
 }
 
 .advant-one__icon--3 {
-	.sprite(@advant-3)
+	.sprite(@advant-3);
 }
 
 .advant-one__icon--4 {
-	.sprite(@advant-4)
+	.sprite(@advant-4);
 }
 
 .advant-one__icon--5 {
-	.sprite(@advant-5)
+	.sprite(@advant-5);
 }
 
 .advant-one__icon--6 {
-	.sprite(@advant-6)
+	.sprite(@advant-6);
 }
 
 
@@ -231,21 +231,189 @@ body {
 .service-inn {
 	max-width: 960px;
 	margin: 0 auto;
+	word-spacing: -0.3em;
+	padding: 50px 0;
+}
+
+.service-col {
+	display: inline-block;
+	width: 31%;
+	margin-right: 3.5%;
+	vertical-align: top;
+
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
 }
 
 .service-one {
-	
+	display: block;
+	height: 240px;
+	margin-bottom: 30px;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	&:nth-child(2) {
+		margin-bottom: 0;
+	}
+
+	&:hover {
+		.service-one-text {
+			top: 0;
+			margin-top: 0;
+		}
+	}
+}
+
+.service-one--center {
+	height: 510px;
+	margin-bottom: 0;
+}
+
+.service-one-text {
+	transition: all 0.2s;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	margin-top: -60px;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.5)
 }
 
 .service-one__title {
-	
+	color: #1979c7;
+	font-size: 22px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 
 .service-one__text {
-	
+	font-size: 18px;
+	line-height: 30px;
 }
 
 .service-one__price {
-	
+	font-size: 18px;
+
+	span {
+		font-size: 24px;
+	}
 }
 
+
+.personal {
+    height: 650px;
+    background-image: url(../img/personal-bg.png);
+    background-size: cover;
+}
+
+.personal-inn {
+    max-width: 960px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.personal-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.personal-slider {
+    width: 880px;
+    height: 120px;
+    margin: 0 auto;
+    word-spacing: -.3em;
+}
+
+.personal-slider-one {
+	text-align: center;
+
+	img {
+		height: 200px;
+	}
+}
+
+
+.personal-descr {
+	height: 440	px;
+	z-index: 10;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
+}
+
+.personal-one {
+    word-spacing: -0.3em;
+    padding: 30px 40px;
+    width: 100%;
+}
+
+.personal-text {
+    display: inline-block;
+    vertical-align: top;
+    width: 580px;
+    margin-right: 40px;
+
+    p {
+    	font-size: 16px;
+
+    	span {
+			color: #06427d;
+    	}
+    }
+}
+
+.personal-one__family {
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+}
+
+.personal-one__name {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.personal-one__position {
+    font-size: 18px;
+    font-style: italic;
+    color: #06427d;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.personal-sert {
+    display: inline-block;
+    vertical-align: top;
+    width: 260px;
+
+}
+
+.personal-sert-one {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+    &:before {
+    	content: "";
+    	.sprite(@zoom-in);
+    	position: absolute;
+    	left: 50%;
+    	top: 50%;
+    	margin-left: -16px;
+    	margin-top: -16px;
+    	opacity: 0;
+    	transition: all 0.3s;
+    }
+
+    &:hover {
+    	&:before {
+    		opacity: 1;
+    	}
+    }
+}

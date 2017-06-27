@@ -3,10 +3,9 @@
  */
 //= ../../bower_components/jquery/dist/jquery.js
 
-//= ../plugin/jquery-ui/jquery-ui.min.js
-
-//= ../plugin/owl.carousel/owl.carousel.min.js
+//= ../plugin/swiper/js/swiper.min.js
 //= ../plugin/jquery.validate.min.js
+//= ../plugin/jquery.waterwheelCarousel.min.js
 
 /*
  * Custom
