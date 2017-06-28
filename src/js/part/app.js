@@ -113,6 +113,14 @@ $(document).ready(function() {
     });
 
 
-    
+    var about = new Swiper('.about-slider', {
+        loop: true,
+        slidesPerView: 1,
+        hashnav: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
 
 });
