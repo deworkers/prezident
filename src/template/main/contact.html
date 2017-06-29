@@ -1,0 +1,60 @@
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [56.83171856787374,60.6625664999999],
+            zoom: 16,
+            controls: []
+        }, {
+        }),
+     
+
+        myPlacemark = new ymaps.Placemark([
+            56.83171856787374,60.6625664999999
+        ], {
+            iconCaption: 'г. Екатеринбург, улица Победы, 42, эт. 1'
+        }, {
+            preset: 'islands#icon',
+            iconCaptionMaxWidth: '240'
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+});
+</script>
+
+<div class="map" id="map">
+	<div class="map-inn">
+		<div class="wrap">
+			<div class="order-form">
+				<div class="order-form__title">Запись на прием</div>
+				<div class="order-form__subtitle">Заполните, пожалуйста все поля</div>
+				<div class="form-line">
+					<label for="">ФИО</label>
+					<input type="text" >
+				</div>
+				<div class="form-line">
+					<label for="">Телефон</label>
+					<input type="text" >
+				</div>
+				<div class="form-line">
+					<label for="">Услуга</label>
+					<div class="select">
+			           	<input type="text">
+			           	<div class="select-list" style="display: none;">
+			               <div class="select-list__one">Услуга 1</div>
+			               <div class="select-list__one">Услуга 2</div>
+			               <div class="select-list__one">Услуга 3</div>
+			           	</div>
+			        </div>
+				</div>
+				<div class="form-line">
+					<label for="">Время приема</label>
+					<input type="text">
+				</div>
+				<div class="form-line">
+					<button type="submit">Отправить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
