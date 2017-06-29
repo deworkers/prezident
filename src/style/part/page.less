@@ -119,6 +119,7 @@ body {
 	text-decoration: none;
 	margin: 0 70px;
 	position: relative;
+	box-shadow: 0 15px 15px -10px rgba(0,0,0,0.5);
 
 	&:nth-child(3n) {
 		margin-right: 0;
@@ -128,7 +129,7 @@ body {
 		margin-left: 0;
 	}
 
-	&:after {
+	/*&:after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -137,11 +138,15 @@ body {
 		z-index: 1;	
 		.sprite(@baner-shadow);
 		opacity: 0.9;
-	}
+	}*/
 
 	img {
 		z-index: 2;
 		display: block;
+	}
+
+	&:hover {
+		box-shadow: 0 10px 15px -10px rgba(0,0,0,0.7);
 	}
 }
 
