@@ -88,12 +88,23 @@ $(document).ready(function() {
         loop: true,
         slidesPerView: 1,
         hashnav: true,
+        autoHeight: true
 
     });
 
+    var separation;
+
+    if ( $(window).width() > 760 ) {
+        separation = 180;
+    } else {
+        separation = 120;
+    }
+
     var carousel = $(".personal-slider").waterwheelCarousel({
         flankingItems: 1,
-        forcedImageWidth: 300,
+        forcedImageWidth: 150,
+        forcedImagHeight: 150,
+        separation: separation,
         movedToCenter: function ($item) {
             $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
         },
@@ -101,9 +112,21 @@ $(document).ready(function() {
             $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
         },
         clickedCenter: function ($item) {
-          $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+            $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
         }
     });
+
+    $(window).resize(function() {
+        if ( $(window).width() > 760 ) {
+            separation = 180;
+        } else {
+            separation = 120;
+        }
+        carousel.reload({
+            separation: separation
+        });
+    });
+
 
     $('.personal-slider-one').on('click', function() {
         thisId = $(this).data('id');

@@ -18,11 +18,13 @@ ymaps.ready(function () {
             iconCaptionMaxWidth: '240'
         });
 
+    myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);
 });
 </script>
 
 <div class="map" id="map">
+</div>
 	<div class="map-inn">
 		<div class="wrap">
 			<div class="order-form">
@@ -57,4 +59,3 @@ ymaps.ready(function () {
 			</div>
 		</div>
 	</div>
-</div>
