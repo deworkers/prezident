@@ -146,6 +146,24 @@ $(document).ready(function() {
         prevButton: '.swiper-button-prev',
     });
 
+    var partner = new Swiper('.partner-list', {
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 20,
+        autoplay: 3000,
+        breakpoints: {
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
+            // when window width is <= 480px
+            480: {
+              slidesPerView: 3,
+              spaceBetween: 20
+            }
+          }
+    });
+
 
     $('.personal-sert-one').magnificPopup({
         type: 'image',
@@ -168,8 +186,15 @@ $(document).ready(function() {
         mainClass: 'mfp-fade',
         removalDelay: 160,
         preloader: false,
-
         fixedContentPos: false
+    });
+
+    $('.service-one').mouseenter(function() {
+        $(this).find('video')[0].play();
+    });
+
+    $('.service-one').mouseleave(function() {
+        $(this).find('video')[0].pause();
     });
 
 
