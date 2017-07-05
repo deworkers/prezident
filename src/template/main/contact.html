@@ -33,31 +33,49 @@ ymaps.ready(function () {
 					<div class="order-form__subtitle">Заполните, пожалуйста все поля</div>
 					<div class="form-line">
 						<label for="">ФИО</label>
-						<input type="text" >
+						<input type="text" name="name">
 					</div>
 					<div class="form-line">
 						<label for="">Телефон</label>
-						<input type="text" >
+						<input type="text" name="phone">
 					</div>
 					<div class="form-line">
 						<label for="">Услуга</label>
 						<div class="select">
-				           	<input type="text">
+				           	<input type="text" name="service">
 				           	<div class="select-list" style="display: none;">
-				               <div class="select-list__one">Услуга 1</div>
-				               <div class="select-list__one">Услуга 2</div>
-				               <div class="select-list__one">Услуга 3</div>
+				               <div class="select-list__one">Лечение кариеса</div>
+				               <div class="select-list__one">Пародонтология</div>
+				               <div class="select-list__one">Имплантация зубов</div>
+				               <div class="select-list__one">Гигиена полости рта</div>
+				               <div class="select-list__one">Отбеливание зубов</div>
+				               <div class="select-list__one">Удаление зубов</div>
+				               <div class="select-list__one">Удаление зубов</div>
+				               <div class="select-list__one">Ортодонтия</div>
+				               <div class="select-list__one">Консультация</div>
 				           	</div>
 				        </div>
 					</div>
 					<div class="form-line">
 						<label for="">Время приема</label>
-						<input type="text">
+						<div class="select" >
+				           	<input type="text" name="time">
+				           	<div class="select-list" style="display: none;">
+				               <div class="select-list__one">Утро</div>
+				               <div class="select-list__one">День</div>
+				               <div class="select-list__one">Вечер</div>
+				           	</div>
+				        </div>
 					</div>
+
 					<div class="form-line">
 						<button type="submit">Отправить</button>
 					</div>
 				</form>
+				<div class="after-submit">
+					<h2>Ваше сообщение отправлено</h2>
+					<p>Мы свяжемся с вами<br>в ближайшее время</p>
+				</div>
 			</div>
 		</div>
 	</div>

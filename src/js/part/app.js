@@ -197,5 +197,53 @@ $(document).ready(function() {
         $(this).find('video')[0].pause();
     });
 
+    $('input[name="phone"]').mask("+7(999) 999-99-99",{placeholder:"_"});
+
+    $('#order').validate({ 
+        rules:{
+            name:{
+                required: true,
+            },
+            phone:{
+                required: true,
+            },
+            service:{
+                required: true,
+            },
+            time:{
+                required: true,
+            }
+       },
+
+       messages:{
+            name:{
+                required: "Введите ваше имя",
+            },
+            phone:{
+                required: "Введите ваш телефон",
+            },
+            service:{
+                required: "Выберете услугу",
+            },
+            time:{
+                required: "Выберете время приема",
+            }
+       },
+       submitHandler: function() {
+
+            $('#order').hide();
+            $('.after-submit').fadeIn();
+        }
+    });
+
+    $("#order").submit(function() { //устанавливаем событие отправки для формы с id=form
+        var formData = $(this).serialize(); //собераем все данные из формы
+        $.ajax({
+            type: "POST", //Метод отправки
+            url: "/template/send.php", //путь до php фаила отправителя
+            data: formData
+        });
+    });
+
 
 });
