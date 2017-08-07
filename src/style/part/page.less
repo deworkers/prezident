@@ -21,7 +21,7 @@ body {
 
 
 .head {
-	height: 1260px;
+	height: 1210px;
 	background-color: #fff;
 	background-image: url(../img/bg-top.jpg);
 	background-repeat: no-repeat;
@@ -57,6 +57,8 @@ body {
 	height: 135px;
 	z-index: 10;
 }
+
+
 
 .menu-open {
 	position: absolute;
@@ -123,10 +125,60 @@ body {
 	display: inline-block;
 }
 
+.head-fixed {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	padding: 10px 20px;
+	background: rgba(0,50,100,0.6);
+}
+
+.head-top--fixed {
+	position: relative;
+	top: auto;
+	left: auto;
+	
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		width: 162px;
+	}
+}
+
+.menu-open--fixed {
+	z-index: 15;
+	.sprite(@menu);
+	position: relative;
+	top: auto;
+	left: auto;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.head-contact__phone--fixed {
+	color: #fff;
+	font-size: 28px;
+}
+
+.head-service__one--fixed {
+	margin-bottom: 0;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	position: relative;	
+}
+
 .head-baner {
 	max-width: 960px;
 	margin: 0 auto;
-	padding-top: 550px;
+	padding-top: 510px;
 	text-align: center;
 	word-spacing: -0.3em;
 	z-index: 10;
@@ -192,6 +244,7 @@ body {
 	width: 50%;
 	display: inline-block;
 	margin-bottom: 20px;
+	text-decoration: none;
 }
 
 .advant-one__icon {
@@ -255,7 +308,7 @@ body {
 	max-width: 960px;
 	margin: 0 auto;
 	word-spacing: -0.3em;
-	padding: 50px 0;
+	padding: 70px 0;
 }
 
 .service-col {
@@ -324,6 +377,20 @@ body {
 .service-one__text {
 	font-size: 18px;
 	line-height: 30px;
+
+	li {
+		font-size: 18px;
+		list-style: none;
+		position: relative;
+		text-decoration: underline;
+
+		&:after {
+			content: "-";
+			position: absolute;
+			left: -15px;
+    		top: -1px;
+		}
+	}
 }
 
 .service-one__price {
@@ -336,15 +403,16 @@ body {
 
 
 .personal {
-    height: 650px;
+    //height: 650px;
     background-image: url(../img/personal-bg.png);
     background-size: cover;
+    margin-bottom: -70px;	
 }
 
 .personal-inn {
     max-width: 960px;
 	margin: 0 auto;
-	padding-top: 50px;
+	padding-top: 70px;
 }
 
 .personal-title {
@@ -430,6 +498,13 @@ body {
     text-decoration: none;
     position: relative;
     display: inline-block;
+    width: 125px;
+    vertical-align: top;
+    line-height: 0;
+
+    img {
+    	width: 100%;
+    }
 
     &:before {
     	content: "";

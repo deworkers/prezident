@@ -87,7 +87,7 @@ $(document).ready(function() {
     var swiper = new Swiper('.personal-descr', {
         loop: true,
         slidesPerView: 1,
-        hashnav: true,
+        //hashnav: true,
         autoHeight: true
 
     });
@@ -139,8 +139,8 @@ $(document).ready(function() {
     var about = new Swiper('.about-slider', {
         loop: true,
         slidesPerView: 1,
-        hashnav: true,
-        pagination: '.swiper-pagination',
+        //hashnav: true,
+        //pagination: '.swiper-pagination',
         paginationClickable: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
@@ -164,22 +164,29 @@ $(document).ready(function() {
           }
     });
 
-
-    $('.personal-sert-one').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        fixedContentPos: true,
-        mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-        image: {
-            verticalFit: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 300 // don't foget to change the duration also in CSS
-        }
+    $('.personal-sert').each(function() {
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            fixedContentPos: true,
+            mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+            image: {
+                verticalFit: true
+            },
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300 // don't foget to change the duration also in CSS
+            }
+        });
     });
 
+
+   
     $('.about-video__preview').magnificPopup({
         disableOn: 700,
         type: 'iframe',
@@ -196,6 +203,12 @@ $(document).ready(function() {
     $('.service-one').mouseleave(function() {
         $(this).find('video')[0].pause();
     });
+
+    if ( $(window).width < 1024 ) {
+        $('.service-one').each(function() {
+            $(this).find('video')[0].play();
+        });
+    }
 
     $('input[name="phone"]').mask("+7(999) 999-99-99",{placeholder:"_"});
 
@@ -243,6 +256,18 @@ $(document).ready(function() {
             url: "/template/send.php", //путь до php фаила отправителя
             data: formData
         });
+    });
+
+    $(document).scroll(function() {
+        if ( $(document).scrollTop() >= 1200  ) {
+            $('.head-fixed').css({
+                'top':'0'
+            });
+        } else {
+            $('.head-fixed').css({
+                'top':'-100%'
+            });
+        }
     });
 
 
